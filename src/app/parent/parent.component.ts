@@ -44,6 +44,13 @@ export class ParentComponent {
     { id: 1, title: 'Lit', weekGrades: [{ id: 0, gradeItem: 5 }] },
   ];
 
+  isLoading = true;
+  constructor() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000);
+  }
+
   getGrade(value: Grades) {
     this.grades = value;
   }

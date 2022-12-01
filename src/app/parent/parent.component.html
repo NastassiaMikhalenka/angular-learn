@@ -1,4 +1,6 @@
-<div>
+<div *ngIf="isLoading; else content">Loading...</div>
+
+<ng-template #content>
   <h1>parent {{ name }} {{ surname }} from {{ city }} {{ address.street }} {{ address.house }}</h1>
   <app-child
     [surnameProps]="surname"
@@ -27,4 +29,4 @@
       </h3>
     </div>
   </div>
-</div>
+</ng-template>
