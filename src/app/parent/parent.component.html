@@ -14,4 +14,17 @@
   <div *ngFor="let value of values">
     <p>{{ value }}</p>
   </div>
+
+  <h2>NgFor</h2>
+  <div *ngFor="let lesson of lessons">
+    <div>{{ lesson.title }}</div>
+    <div>
+      <h3>
+        weekGrades
+        <div *ngFor="let grade of lesson.weekGrades">
+          {{ grade.gradeItem }}
+        </div>
+      </h3>
+    </div>
+  </div>
 </div>
