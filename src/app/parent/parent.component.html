@@ -31,5 +31,13 @@
       </h3>
     </div>
   </div>
+  <h2>ngSwitch</h2>
+  <input type="text" [(ngModel)]="ngSwitchValue" />
+  <div [ngSwitch]="ngSwitchValue">
+    <p *ngSwitchCase="'1'">One</p>
+    <p *ngSwitchCase="'2'">Two</p>
+    <p *ngSwitchCase="'3'">Three</p>
+    <p *ngSwitchDefault>Unknown number</p>
+  </div>
   <!--</ng-template>-->
 </ng-container>

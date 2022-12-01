@@ -45,6 +45,8 @@ export class ParentComponent {
   ];
 
   isLoading = true;
+
+  ngSwitchValue = '';
   constructor() {
     setTimeout(() => {
       this.isLoading = false;
