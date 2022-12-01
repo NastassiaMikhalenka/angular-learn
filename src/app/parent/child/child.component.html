@@ -1,0 +1,10 @@
+<div>
+  <h2>
+    child {{ name }} {{ surnameProps }} from {{ city }} {{ address?.street }} {{ address?.house }}
+  </h2>
+
+  <button (click)="sendGradeHandler()">Send grade</button>
+</div>
+
+<input type="text" [(ngModel)]="inputValue" />
+<button (click)="sendValueHandler()">Send value</button>

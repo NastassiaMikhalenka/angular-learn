@@ -1,0 +1,17 @@
+<div>
+  <h1>parent {{ name }} {{ surname }} from {{ city }} {{ address.street }} {{ address.house }}</h1>
+  <app-child
+    [surnameProps]="surname"
+    [city]="city"
+    [address]="address"
+    (sendGradeEvent)="getGrade($event)"
+    (sendValueEvent)="getValue($event)"
+  ></app-child>
+
+  <p>math: {{ grades?.math }} lit: {{ grades?.lit }}</p>
+
+  <h2>Закрепление @Output</h2>
+  <div *ngFor="let value of values">
+    <p>{{ value }}</p>
+  </div>
+</div>
