@@ -15,12 +15,13 @@ export interface Grade {
   gradeItem: number;
 }
 
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css'],
 })
-export class ParentComponent {
+export class ParentComponent{
   name = 'Ivan';
   surname = 'Petrov';
   city = 'Minsk';
@@ -50,6 +51,7 @@ export class ParentComponent {
   constructor() {
     setTimeout(() => {
       this.isLoading = false;
+      this.isSuccessNgClass = false
     }, 3000);
   }
 
@@ -61,4 +63,8 @@ export class ParentComponent {
     debugger;
     this.values.push(data);
   }
+
+  isSuccessNgClass = true;
+
+
 }
